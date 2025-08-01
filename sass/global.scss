@@ -1,45 +1,46 @@
-@import '~normalize.scss/normalize.scss';
-@import '~include-media/dist/_include-media';
+@import "~normalize.scss/normalize.scss";
+@import "~include-media/dist/_include-media";
 
 .viewer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   height: calc(100vh - 3em);
-  gap:1.5em;
-  padding:1.5em;
+  gap: 1.5em;
+  padding: 1.5em;
+  background-color: #030303;
 
-  @include media('<768px'){
+  @include media("<768px") {
     grid-template-columns: 1fr;
   }
 
   iframe,
-  &>div {
+  & > div {
     width: 100%;
     height: 100%;
   }
 
-  &__video {
-    grid-column: 1 / 4;
-    
-    @include media('<768px'){
-      grid-column: 1;
-    }
-  }
+  // &__video {
+  //   grid-column: 1 / 4;
 
-  &__map {
-    grid-column: 1/3;
-    
-    @include media('<768px'){
-      grid-column: 1;
-    }
-  }
+  //   @include media('<768px'){
+  //     grid-column: 1;
+  //   }
+  // }
 
-  &__spotting {
-    grid-column:3;
-    
-    @include media('<768px'){
-      grid-column: 1;
-    }
-  }
+  // &__map {
+  //   grid-column: 1/3;
+
+  //   @include media('<768px'){
+  //     grid-column: 1;
+  //   }
+  // }
+
+  // &__spotting {
+  //   grid-column:3;
+
+  //   @include media('<768px'){
+  //     grid-column: 1;
+  //   }
+  // }
 }
